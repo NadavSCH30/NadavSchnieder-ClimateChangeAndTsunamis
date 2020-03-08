@@ -82,15 +82,30 @@ def DataModel():
 @app.route('/Dataset1')
 def Dataset1():
     """Renders the contact page."""
-    df = pd.read_csv(path.join(path.dirname(__file__), 'static\Data\waves.csv'))
-    df2 = pd.read_csv(path.join(path.dirname(__file__), 'static\Data\GlobalTemperatures.csv'))
+    df = pd.read_csv(path.join(path.dirname(__file__), 'static\Data\GlobalTemperatures.csv'))
     raw_data_table = df.to_html(classes = 'table table-hover')
-    df_head= pd.df.head
+   
 
  
     return render_template(
         'DataSet1.html',
-        title='This is Data Set 1 page',
+        title='This is Dataset 1 page',
+        raw_data_table = raw_data_table,
+        year=datetime.now().year,
+        message='In this page we will display the datasets we are going to use in order to answer ARE THERE UFOs'
+    )
+
+@app.route('/Dataset2')
+def Dataset2():
+    """Renders the contact page."""
+    df = pd.read_csv(path.join(path.dirname(__file__), 'static\Data\waves.csv'))
+    raw_data_table = df.to_html(classes = 'table table-hover')
+   
+
+ 
+    return render_template(
+        'DataSet2.html',
+        title='This is Dataset 2 page',
         raw_data_table = raw_data_table,
         year=datetime.now().year,
         message='In this page we will display the datasets we are going to use in order to answer ARE THERE UFOs'

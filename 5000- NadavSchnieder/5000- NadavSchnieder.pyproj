@@ -83,6 +83,7 @@
     <Content Include="_5000__NadavSchnieder\templates\DataModel.html" />
     <Content Include="_5000__NadavSchnieder\templates\register.html" />
     <Content Include="_5000__NadavSchnieder\templates\Dataset1.html" />
+    <Content Include="_5000__NadavSchnieder\templates\Dataset2.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
