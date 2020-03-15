@@ -137,7 +137,40 @@ def register():
         )
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def Login():
+    form = LoginFormStructure(request.form)
 
+    if (request.method == 'POST' and form.validate()):
+        if (db_Functions.IsLoginGood(form.username.data, form.password.data)):
+            flash('Login approved!')
+            #return redirect('<were to go if login is good!')
+        else:
+            flash('Error')
+   
+    return render_template(
+        'login.html', 
+        form=form, 
+        title='Login to data analysis',
+        year=datetime.now().year,
+        repository_name='Pandas',
+        )
+
+
+
+
+@app.route('/DataQuery')
+def DataQuery():
+
+
+    return render_template(
+        'DataQuery.html', 
+        form=form, 
+        title='Analyze data',
+        year=datetime.now().year,
+        repository_name='Pandas',
+        )
+   
 
        #message='This page will show my datasets, how I will work with them and what do I plan to do with them.'
  

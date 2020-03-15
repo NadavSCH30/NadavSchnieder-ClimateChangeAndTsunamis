@@ -78,12 +78,14 @@
     <Content Include="_5000__NadavSchnieder\static\scripts\_references.js" />
     <Content Include="_5000__NadavSchnieder\templates\about.html" />
     <Content Include="_5000__NadavSchnieder\templates\contact.html" />
+    <Content Include="_5000__NadavSchnieder\templates\DataQuery.html" />
     <Content Include="_5000__NadavSchnieder\templates\Home.html" />
     <Content Include="_5000__NadavSchnieder\templates\layout.html" />
     <Content Include="_5000__NadavSchnieder\templates\DataModel.html" />
     <Content Include="_5000__NadavSchnieder\templates\register.html" />
     <Content Include="_5000__NadavSchnieder\templates\Dataset1.html" />
     <Content Include="_5000__NadavSchnieder\templates\Dataset2.html" />
+    <Content Include="_5000__NadavSchnieder\templates\Login.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">

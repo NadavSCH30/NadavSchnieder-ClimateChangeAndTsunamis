@@ -37,8 +37,10 @@ class QueryFormStructure(FlaskForm):
 ##   the 'submit' button - the button the user will press to have the 
 ##                         form be "posted" (sent to the server for process)
 class LoginFormStructure(FlaskForm):
-    username   = StringField('User name:  ' , validators = [DataRequired()])
-    password   = PasswordField('Pass word:  ' , validators = [DataRequired()])
+    username   = StringField('User name:  ' , validators = [DataRequired('Username incorrect')])
+    password   = PasswordField('Pass word:  ' , validators = [DataRequired('Password incorrect')])
+    email = TextField('Email: ', validators = [DataRequired('Email incorrect')])
+
     submit = SubmitField('Submit')
 
 
